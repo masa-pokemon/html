@@ -33,7 +33,7 @@
     const img = document.getElementById('movingImage');
     let posX = 0;
     let direction = 1; // 1 = 右、-1 = 左
-    const speed = 10; // ピクセル移動速度
+    const speed = 100; // ピクセル移動速度
 
     function move() {
       const containerWidth = window.innerWidth;
@@ -49,7 +49,7 @@
       }
 
       img.style.left = posX + 'px';
-      requestAnimationFrame(move);
+      //requestAnimationFrame(move);
     }
 
     move();
