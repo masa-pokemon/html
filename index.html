@@ -1,13 +1,14 @@
 <pre id="screen"></pre>
 <script>
   const screenPre = document.getElementById("screen");
+  screen = "";
   screenText = 1;
   right = True;
   while True {
-    screenPre += "*" * sceeenText;
-    screenPre += "#" * 1;
+    screen += "*" * sceeenText;
+    screen += "#" * 1;
     index = 10 - screenText;
-    screenPre += "*" * index;
+    screen += "*" * index;
     if right {
       screenText += 1;
     } else {
@@ -17,6 +18,8 @@
       right = False;
     } else if screenText == 0 {
       right = True;
+      
     }
+    screenPre.textContent = screen;
   }
 </script>
