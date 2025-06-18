@@ -1,0 +1,22 @@
+<pre id="screen"></pre>
+<script>
+  const screenPre = document.getElementById("screen");
+  screenText = 1;
+  right = True;
+  while True {
+    screenPre += "*" * sceeenText;
+    screenPre += "#" * 1;
+    index = 10 - screenText;
+    screenPre += "*" * index;
+    if right {
+      screenText += 1;
+    } else {
+      screenText -= 1;
+    }
+    if screenText == 10 {
+      right = False;
+    } else if screenText == 0 {
+      right = True;
+    }
+  }
+</script>
